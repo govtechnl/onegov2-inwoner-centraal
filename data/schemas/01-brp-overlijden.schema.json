@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/govtechnl/onegov2-inwoner-centraal/data/schemas/01-brp-overlijden.schema.json",
+  "title": "BRP-style death registration & relationships",
+  "description": "One record per deceased person. Synthetic only.",
+  "type": "object",
+  "required": ["id", "synthetic", "bron", "overledene", "relatie"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^urn:overlijden:test:[0-9a-f-]{36}$" },
+    "synthetic": { "const": true },
+    "bron": { "const": "onegov2-inwoner-centraal-generator" },
+    "overledene": {
+      "type": "object",
+      "required": ["bsn", "geslachtsnaam", "voornamen", "geboortedatum", "overlijdensdatum", "gemeente_overlijden", "woonadres"],
+      "additionalProperties": false,
+      "properties": {
+        "bsn": { "$ref": "#/$defs/bsn" },
+        "geslachtsnaam": { "type": "string", "minLength": 1 },
+        "voornamen": { "type": "string", "minLength": 1 },
+        "geboortedatum": { "$ref": "#/$defs/date" },
+        "overlijdensdatum": { "$ref": "#/$defs/date" },
+        "gemeente_overlijden": { "type": "string", "minLength": 1 },
+        "woonadres": { "$ref": "#/$defs/adres" }
+      }
+    },
+    "partner": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "required": ["bsn", "geslachtsnaam", "voornamen", "geboortedatum", "woonadres"],
+          "additionalProperties": false,
+          "properties": {
+            "bsn": { "$ref": "#/$defs/bsn" },
+            "geslachtsnaam": { "type": "string", "minLength": 1 },
+            "voornamen": { "type": "string", "minLength": 1 },
+            "geboortedatum": { "$ref": "#/$defs/date" },
+            "woonadres": { "$ref": "#/$defs/adres" }
+          }
+        }
+      ]
+    },
+    "relatie": {
+      "type": "object",
+      "required": ["vorm"],
+      "additionalProperties": false,
+      "properties": {
+        "vorm": { "enum": ["huwelijk", "geregistreerd_partnerschap", "samenwonend", "geen"] },
+        "aanvang": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/date" }] }
+      }
+    }
+  },
+  "$defs": {
+    "bsn": {
+      "type": "string",
+      "pattern": "^[0-9]{9}$",
+      "description": "Synthetic 9-digit BSN. Generator MUST ensure 11-proof validity."
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "adres": {
+      "type": "object",
+      "required": ["straat", "huisnummer", "postcode", "woonplaats"],
+      "additionalProperties": false,
+      "properties": {
+        "straat": { "type": "string", "minLength": 1 },
+        "huisnummer": { "type": "string", "minLength": 1 },
+        "postcode": { "type": "string", "pattern": "^[0-9]{4}\\s?[A-Z]{2}$" },
+        "woonplaats": { "type": "string", "minLength": 1 },
+        "verzorgingstehuis": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}

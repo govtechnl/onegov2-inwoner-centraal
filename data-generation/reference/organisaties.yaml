@@ -1,0 +1,80 @@
+# Reference: the 12 government organisations in scope
+# This list is the source of truth used by all generators.
+# Source: Aanpak Levensgebeurtenissen (BZK, 2025) inventory.
+
+organisaties:
+  - code: Gemeente
+    naam: Gemeente (variabel — woongemeente)
+    rol: Registratie overlijden in BRP, condoleance, parkeervergunning, lokale belastingen
+    kanaal_primair: brief
+    digitaal_loket: variabel
+    bsn_signaal_uit_brp_bekend: true   # gemeente registreert zelf
+  - code: SVB
+    naam: Sociale Verzekeringsbank
+    rol: AOW, ANW, overlijdensuitkering
+    kanaal_primair: digitaal+brief
+    digitaal_loket: https://www.svb.nl/nl/mijn-svb
+    bsn_signaal_uit_brp_bekend: true
+  - code: CAK
+    naam: Centraal Administratie Kantoor
+    rol: WLZ-eigen bijdrage
+    kanaal_primair: brief
+    digitaal_loket: https://www.hetcak.nl/mijn-cak
+    bsn_signaal_uit_brp_bekend: true
+  - code: RDW
+    naam: Rijksdienst voor het Wegverkeer
+    rol: Voertuigregistratie / tenaamstelling
+    kanaal_primair: brief
+    digitaal_loket: https://www.rdw.nl
+    bsn_signaal_uit_brp_bekend: false  # bereikt RDW vertraagd via koppelvlak
+  - code: Waterschap
+    naam: Waterschap (variabel — afhankelijk van woonplaats)
+    rol: Watersysteem- en zuiveringsheffing
+    kanaal_primair: brief
+    digitaal_loket: variabel
+    bsn_signaal_uit_brp_bekend: false
+    peildatum: '01-01'  # peildatum logica
+  - code: Belastingdienst
+    naam: Belastingdienst
+    rol: Inkomstenbelasting, erfbelasting
+    kanaal_primair: brief+berichtenbox
+    digitaal_loket: https://www.belastingdienst.nl
+    bsn_signaal_uit_brp_bekend: true
+  - code: Toeslagen
+    naam: Belastingdienst/Toeslagen
+    rol: Zorg-, huur-, kindgebonden-, kinderopvangtoeslag
+    kanaal_primair: brief+berichtenbox
+    digitaal_loket: https://www.toeslagen.nl
+    bsn_signaal_uit_brp_bekend: true
+  - code: RVO
+    naam: Rijksdienst voor Ondernemend Nederland
+    rol: Subsidies (waaronder WBSO) voor ondernemers
+    kanaal_primair: brief+digitaal
+    digitaal_loket: https://mijn.rvo.nl
+    bsn_signaal_uit_brp_bekend: false
+    optioneel: true   # alleen relevant voor ondernemers
+  - code: CJIB
+    naam: Centraal Justitieel Incassobureau
+    rol: Inning boetes en vorderingen
+    kanaal_primair: brief
+    digitaal_loket: https://www.cjib.nl
+    bsn_signaal_uit_brp_bekend: true
+  - code: UWV
+    naam: Uitvoeringsinstituut Werknemersverzekeringen
+    rol: WW, WIA, en andere werknemersverzekeringen
+    kanaal_primair: digitaal+brief
+    digitaal_loket: https://www.uwv.nl/particulieren
+    bsn_signaal_uit_brp_bekend: true
+  - code: DUO
+    naam: Dienst Uitvoering Onderwijs
+    rol: Studieschuld, studiefinanciering
+    kanaal_primair: digitaal+brief
+    digitaal_loket: https://duo.nl
+    bsn_signaal_uit_brp_bekend: true
+  - code: KVK
+    naam: Kamer van Koophandel
+    rol: Handelsregister
+    kanaal_primair: brief
+    digitaal_loket: https://www.kvk.nl
+    bsn_signaal_uit_brp_bekend: false
+    optioneel: true

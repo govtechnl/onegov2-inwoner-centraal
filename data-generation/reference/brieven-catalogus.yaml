@@ -1,0 +1,429 @@
+# Brieven-catalogus
+#
+# Stable letter archetypes per organisation. Each entry is the source of
+# truth used by both the correspondence-stream generator (layer 4) and the
+# reference timeline (layer 5).
+#
+# Sources:
+#   - resources/Bijlage-3-correspondentie-nabestaanden.pdf
+#     (Aanpak Levensgebeurtenissen, BZK 2025 — inventarisatie 12 organisaties)
+#   - resources/Situatie-Truus.pptx (per-organisation letter inventory)
+#
+# Field meanings:
+#   code:                          stable identifier; appears as `brief_code`
+#   organisatie:                   one of organisaties.yaml
+#   omschrijving:                  human-readable label
+#   type:                          one of [informatiebrief, actiebrief,
+#                                          factuur, aanmaning, condoleance,
+#                                          beschikking, terugvordering]
+#   timing.dag_min/dag_max:        days after death the letter typically arrives
+#   aanhef_huidig:                 today's salutation (often "Aan de erven van")
+#   geadresseerde:                 [overledene | erven | partner | contactpersoon]
+#   adres_huidig:                  where the letter typically lands today
+#   actie_vereist:                 boolean
+#   actie_omschrijving:            null or short description
+#   wettelijke_reactietermijn_dagen: null or integer
+#   voorwaarden:                   list of conditions when the letter is sent
+#   bron_documenten:               reference identifiers from the source pptx/pdf
+
+brieven:
+
+  # ─────────────────────────────────────────────────────────────────────
+  # RDW
+  # ─────────────────────────────────────────────────────────────────────
+  - code: RDW.S-0068
+    organisatie: RDW
+    omschrijving: Informatiebrief op naam zetten voertuig
+    type: informatiebrief
+    timing: { dag_min: 5, dag_max: 9 }
+    aanhef_huidig: "Beste erven van [naam overledene]"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene heeft een voertuig op naam"]
+    bron_documenten: ["S-0068 Overschrijven kentekenbewijs na overlijden"]
+
+  - code: RDW.S-1712
+    organisatie: RDW
+    omschrijving: Herinnering overschrijven na overlijden
+    type: actiebrief
+    timing: { dag_min: 80, dag_max: 100 }
+    aanhef_huidig: "Beste erven van [naam overledene]"
+    geadresseerde: erven
+    adres_huidig: ervenadres_belastingdienst
+    actie_vereist: true
+    actie_omschrijving: "Voertuig overschrijven of vrijwaring regelen"
+    wettelijke_reactietermijn_dagen: 90
+    voorwaarden: ["voertuig nog niet overgeschreven na 3 maanden"]
+    bron_documenten: ["S-1712 Herinnering overschrijven na overlijden - brief 2"]
+
+  - code: RDW.S-1713
+    organisatie: RDW
+    omschrijving: Beëindiging tenaamstelling 6 maanden na overlijden
+    type: beschikking
+    timing: { dag_min: 175, dag_max: 195 }
+    aanhef_huidig: "Beste erven van [naam overledene]"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene_en_ervenadres
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["voertuig nog niet overgeschreven na 6 maanden"]
+    bron_documenten: ["S-1713 Beëindigen tenaamstelling 6 maanden na overlijden"]
+
+  # ─────────────────────────────────────────────────────────────────────
+  # SVB
+  # ─────────────────────────────────────────────────────────────────────
+  - code: SVB.ANW-INFO
+    organisatie: SVB
+    omschrijving: ANW informatiebrief
+    type: informatiebrief
+    timing: { dag_min: 3, dag_max: 7 }
+    aanhef_huidig: "Geachte mevrouw/heer [partner]"
+    geadresseerde: partner
+    adres_huidig: woonadres_partner
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["surviving partner under AOW age"]
+    bron_documenten: ["1908ABN.docx"]
+
+  - code: SVB.OVERLIJDENSUITKERING
+    organisatie: SVB
+    omschrijving: Overlijdensuitkering AOW (1 maand AOW + vakantiegeld)
+    type: informatiebrief
+    timing: { dag_min: 5, dag_max: 12 }
+    aanhef_huidig: "Geachte mevrouw/heer [partner]"
+    geadresseerde: partner
+    adres_huidig: woonadres_partner
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene ontving AOW", "achterblijvende partner"]
+    bron_documenten: ["SVB Overlijdensuitkering"]
+
+  - code: SVB.JAAROPGAVE
+    organisatie: SVB
+    omschrijving: Jaaropgave AOW (papier, niet digitaal te vervangen)
+    type: informatiebrief
+    timing: { dag_min: 5, dag_max: 12 }
+    aanhef_huidig: "Geachte mevrouw/heer [overledene]"
+    geadresseerde: overledene
+    adres_huidig: laatste_adres_overledene
+    actie_vereist: false
+    actie_omschrijving: "Bewaren — kan niet digitaal opnieuw worden verstrekt"
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene ontving AOW"]
+    bron_documenten: ["SVB Jaaropgave"]
+
+  # ─────────────────────────────────────────────────────────────────────
+  # CAK
+  # ─────────────────────────────────────────────────────────────────────
+  - code: CAK.WLZ-CONDOLEANCE
+    organisatie: CAK
+    omschrijving: WLZ condoleancebrief
+    type: condoleance
+    timing: { dag_min: 3, dag_max: 7 }
+    aanhef_huidig: "Aan de erven van meneer/mevrouw [overledene]"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene ontving WLZ-zorg"]
+    bron_documenten: ["CAK WLZ condoleance"]
+
+  - code: CAK.WLZ-FACTUUR
+    organisatie: CAK
+    omschrijving: WLZ-factuur (laatste eigen bijdrage)
+    type: factuur
+    timing: { dag_min: 14, dag_max: 60 }
+    aanhef_huidig: "Mevrouw/heer [partner] inzake meneer/mevrouw [overledene]"
+    geadresseerde: contactpersoon
+    adres_huidig: contactadres_partner_indien_bekend
+    actie_vereist: true
+    actie_omschrijving: "Factuur betalen"
+    wettelijke_reactietermijn_dagen: 30
+    voorwaarden: ["overledene ontving WLZ-zorg", "contactadres bij CAK bekend"]
+    bron_documenten: ["CAK WLZ factuur"]
+
+  - code: CAK.INCASSO-MISLUKT
+    organisatie: CAK
+    omschrijving: Bericht over mislukte automatische incasso
+    type: aanmaning
+    timing: { dag_min: 30, dag_max: 90 }
+    aanhef_huidig: "Aan [overledene]"
+    geadresseerde: overledene
+    adres_huidig: woonadres_overledene
+    actie_vereist: true
+    actie_omschrijving: "Betaling regelen"
+    wettelijke_reactietermijn_dagen: 14
+    voorwaarden: ["bankrekening overledene bevroren"]
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Toeslagen (zorgtoeslag — voorbeeld; dezelfde structuur geldt voor huurtoeslag)
+  # ─────────────────────────────────────────────────────────────────────
+  - code: TOESLAGEN.HERZIENE-BESCHIKKING-ZORG
+    organisatie: Toeslagen
+    omschrijving: Herziene beschikking zorgtoeslag
+    type: beschikking
+    timing: { dag_min: 7, dag_max: 28 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene ontving zorgtoeslag"]
+    bron_documenten: ["Toeslagen herziene beschikking"]
+
+  - code: TOESLAGEN.TERUGVORDERING-ZORG
+    organisatie: Toeslagen
+    omschrijving: Terugvorderingsbeschikking zorgtoeslag
+    type: terugvordering
+    timing: { dag_min: 14, dag_max: 35 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: true
+    actie_omschrijving: "Bedrag terugbetalen of bezwaar maken"
+    wettelijke_reactietermijn_dagen: 42
+    voorwaarden: ["herziene beschikking zorgtoeslag verstuurd"]
+    bron_documenten: ["Toeslagen terugvordering"]
+
+  - code: TOESLAGEN.DEFINITIEVE-TOEKENNING-ZORG
+    organisatie: Toeslagen
+    omschrijving: Definitieve toekenning zorgtoeslag (jaarafsluiting)
+    type: beschikking
+    timing: { dag_min: 330, dag_max: 400 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: ervenadres_belastingdienst
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene ontving zorgtoeslag"]
+    bron_documenten: ["Toeslagen definitieve toekenning"]
+
+  - code: TOESLAGEN.NAHEFFING-LATE-ZORG
+    organisatie: Toeslagen
+    omschrijving: Naheffing of uitvraag rekeningnummer (na definitieve toekenning)
+    type: terugvordering
+    timing: { dag_min: 335, dag_max: 410 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: ervenadres_belastingdienst
+    actie_vereist: true
+    actie_omschrijving: "Bedrag terugbetalen of rekeningnummer doorgeven"
+    wettelijke_reactietermijn_dagen: 42
+    voorwaarden: ["openstaand of teveel betaald bedrag bij definitieve toekenning"]
+    bron_documenten: []
+
+  - code: TOESLAGEN.HERZIENE-BESCHIKKING-HUUR
+    organisatie: Toeslagen
+    omschrijving: Herziene beschikking huurtoeslag (partner)
+    type: beschikking
+    timing: { dag_min: 14, dag_max: 60 }
+    aanhef_huidig: "Geachte mevrouw/heer [partner]"
+    geadresseerde: partner
+    adres_huidig: woonadres_partner
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["partner ontvangt huurtoeslag — herberekening na overlijden"]
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Belastingdienst — Erfbelasting / IB
+  # ─────────────────────────────────────────────────────────────────────
+  - code: BD.ERVENBRIEF
+    organisatie: Belastingdienst
+    omschrijving: Ervenbrief (eerste contact erven)
+    type: actiebrief
+    timing: { dag_min: 7, dag_max: 35 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: true
+    actie_omschrijving: "Contactpersoon doorgeven aan Belastingdienst"
+    wettelijke_reactietermijn_dagen: 30
+    voorwaarden: []
+    bron_documenten: ["AL780 Contactpersonen Nabestaanden"]
+
+  - code: BD.AANGIFTE-ERFBELASTING
+    organisatie: Belastingdienst
+    omschrijving: Aangifte erfbelasting
+    type: actiebrief
+    timing: { dag_min: 90, dag_max: 180 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: ervenadres_belastingdienst
+    actie_vereist: true
+    actie_omschrijving: "Aangifte erfbelasting binnen 8 maanden indienen"
+    wettelijke_reactietermijn_dagen: 240   # 8 maanden vanaf overlijden
+    voorwaarden: ["nalatenschap aanwezig"]
+    bron_documenten: []
+
+  - code: BD.AANSLAG-IB-OVERLIJDEN
+    organisatie: Belastingdienst
+    omschrijving: Aanslag inkomstenbelasting (overlijdensjaar)
+    type: actiebrief
+    timing: { dag_min: 180, dag_max: 540 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: ervenadres_belastingdienst
+    actie_vereist: true
+    actie_omschrijving: "Aangifte IB doen of aanslag betalen"
+    wettelijke_reactietermijn_dagen: 42
+    voorwaarden: []
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Gemeente
+  # ─────────────────────────────────────────────────────────────────────
+  - code: GEMEENTE.CONDOLEANCE
+    organisatie: Gemeente
+    omschrijving: Condoleancebrief gemeente
+    type: condoleance
+    timing: { dag_min: 3, dag_max: 7 }
+    aanhef_huidig: "Geachte mevrouw/heer [partner]"
+    geadresseerde: partner
+    adres_huidig: woonadres_partner
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["contactgegevens partner doorgegeven bij aangifte overlijden"]
+    bron_documenten: []
+
+  - code: GEMEENTE.PARKEERVERGUNNING
+    organisatie: Gemeente
+    omschrijving: Brief parkeervergunning overnemen of beëindigen
+    type: actiebrief
+    timing: { dag_min: 14, dag_max: 60 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: true
+    actie_omschrijving: "Parkeervergunning overnemen of laten vervallen"
+    wettelijke_reactietermijn_dagen: 30
+    voorwaarden: ["overledene had parkeervergunning"]
+    bron_documenten: ["NVVB voorbeeldbrief parkeervergunning"]
+
+  - code: GEMEENTE.LOKALE-BELASTING
+    organisatie: Gemeente
+    omschrijving: Aanslag gemeentelijke belastingen
+    type: factuur
+    timing: { dag_min: 14, dag_max: 90 }
+    aanhef_huidig: "Aan [overledene]"
+    geadresseerde: overledene
+    adres_huidig: woonadres_overledene
+    actie_vereist: true
+    actie_omschrijving: "Aanslag betalen of bezwaar maken"
+    wettelijke_reactietermijn_dagen: 42
+    voorwaarden: ["overlijden in de eerste maanden van het belastingjaar"]
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Waterschap
+  # ─────────────────────────────────────────────────────────────────────
+  - code: WS.AANSLAG
+    organisatie: Waterschap
+    omschrijving: Waterschapsbelasting (peildatum 1 januari)
+    type: factuur
+    timing: { dag_min: 14, dag_max: 120 }
+    aanhef_huidig: "Aan [overledene]"
+    geadresseerde: overledene
+    adres_huidig: woonadres_overledene_per_1_januari
+    actie_vereist: true
+    actie_omschrijving: "Aanslag betalen — als erfgenaam aansprakelijk"
+    wettelijke_reactietermijn_dagen: 42
+    voorwaarden: ["overledene was bewoner op 1 januari van het belastingjaar"]
+    bron_documenten: ["Unie van Waterschappen — peildatum-uitleg"]
+
+  # ─────────────────────────────────────────────────────────────────────
+  # CJIB
+  # ─────────────────────────────────────────────────────────────────────
+  - code: CJIB.OPENSTAANDE-BOETE
+    organisatie: CJIB
+    omschrijving: Openstaande boete / vordering
+    type: actiebrief
+    timing: { dag_min: 14, dag_max: 90 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: true
+    actie_omschrijving: "Boete betalen of bezwaar"
+    wettelijke_reactietermijn_dagen: 42
+    voorwaarden: ["openstaande boete bij CJIB"]
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # UWV
+  # ─────────────────────────────────────────────────────────────────────
+  - code: UWV.STOPZETTING
+    organisatie: UWV
+    omschrijving: Stopzetting WW/WIA-uitkering
+    type: beschikking
+    timing: { dag_min: 7, dag_max: 21 }
+    aanhef_huidig: "Aan [overledene]"
+    geadresseerde: overledene
+    adres_huidig: woonadres_overledene
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene had WW- of WIA-uitkering"]
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # DUO
+  # ─────────────────────────────────────────────────────────────────────
+  - code: DUO.STUDIESCHULD-VERVALT
+    organisatie: DUO
+    omschrijving: Bevestiging vervallen studieschuld bij overlijden
+    type: informatiebrief
+    timing: { dag_min: 14, dag_max: 60 }
+    aanhef_huidig: "Aan de erven van"
+    geadresseerde: erven
+    adres_huidig: woonadres_overledene
+    actie_vereist: false
+    actie_omschrijving: null
+    wettelijke_reactietermijn_dagen: null
+    voorwaarden: ["overledene had openstaande studieschuld"]
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # KVK (optioneel — ondernemer)
+  # ─────────────────────────────────────────────────────────────────────
+  - code: KVK.UITSCHRIJVING
+    organisatie: KVK
+    omschrijving: Bevestiging uitschrijving onderneming
+    type: informatiebrief
+    timing: { dag_min: 7, dag_max: 30 }
+    aanhef_huidig: "Aan [overledene] / [handelsnaam]"
+    geadresseerde: overledene
+    adres_huidig: vestigingsadres_kvk
+    actie_vereist: true
+    actie_omschrijving: "Eventueel voortzetting of liquidatie regelen"
+    wettelijke_reactietermijn_dagen: 30
+    voorwaarden: ["overledene had eenmanszaak of vof-aandeel"]
+    bron_documenten: []
+
+  # ─────────────────────────────────────────────────────────────────────
+  # RVO (optioneel — ondernemer)
+  # ─────────────────────────────────────────────────────────────────────
+  - code: RVO.WBSO-VERPLICHTING
+    organisatie: RVO
+    omschrijving: WBSO uren-verantwoording
+    type: actiebrief
+    timing: { dag_min: 30, dag_max: 180 }
+    aanhef_huidig: "Aan [overledene] / [handelsnaam]"
+    geadresseerde: overledene
+    adres_huidig: vestigingsadres_kvk
+    actie_vereist: true
+    actie_omschrijving: "Uren verantwoorden of melding doen bij RVO"
+    wettelijke_reactietermijn_dagen: 90
+    voorwaarden: ["overledene had lopende WBSO-toezegging"]
+    bron_documenten: []

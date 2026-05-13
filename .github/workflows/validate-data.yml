@@ -1,0 +1,36 @@
+name: validate-data
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install package + dev deps
+        working-directory: data-generation
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+
+      - name: Lint with ruff
+        working-directory: data-generation
+        run: ruff check .
+
+      - name: Run tests (schema + fixture validation)
+        working-directory: data-generation
+        run: pytest -v
+
+      - name: Smoke-test full generation (n=100)
+        working-directory: data-generation
+        run: python -m generate --seed 1 --n 100 --out /tmp/synthetic

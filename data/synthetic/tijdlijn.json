@@ -1,0 +1,324 @@
+{
+  "synthetic": true,
+  "bron": "onegov2-inwoner-centraal-generator",
+  "organisaties": [
+    {
+      "organisatie": "Belastingdienst",
+      "evenementen": [
+        {
+          "brief_code": "BD.ERVENBRIEF",
+          "omschrijving": "Ervenbrief (eerste contact erven)",
+          "typische_dag_na_overlijden_min": 7,
+          "typische_dag_na_overlijden_max": 35,
+          "voorwaarden": [],
+          "wettelijke_termijn_dagen": 30
+        },
+        {
+          "brief_code": "BD.AANGIFTE-ERFBELASTING",
+          "omschrijving": "Aangifte erfbelasting",
+          "typische_dag_na_overlijden_min": 90,
+          "typische_dag_na_overlijden_max": 180,
+          "voorwaarden": [
+            "nalatenschap aanwezig"
+          ],
+          "wettelijke_termijn_dagen": 240
+        },
+        {
+          "brief_code": "BD.AANSLAG-IB-OVERLIJDEN",
+          "omschrijving": "Aanslag inkomstenbelasting (overlijdensjaar)",
+          "typische_dag_na_overlijden_min": 180,
+          "typische_dag_na_overlijden_max": 540,
+          "voorwaarden": [],
+          "wettelijke_termijn_dagen": 42
+        }
+      ]
+    },
+    {
+      "organisatie": "CAK",
+      "evenementen": [
+        {
+          "brief_code": "CAK.WLZ-CONDOLEANCE",
+          "omschrijving": "WLZ condoleancebrief",
+          "typische_dag_na_overlijden_min": 3,
+          "typische_dag_na_overlijden_max": 7,
+          "voorwaarden": [
+            "overledene ontving WLZ-zorg"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "CAK.WLZ-FACTUUR",
+          "omschrijving": "WLZ-factuur (laatste eigen bijdrage)",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 60,
+          "voorwaarden": [
+            "overledene ontving WLZ-zorg",
+            "contactadres bij CAK bekend"
+          ],
+          "wettelijke_termijn_dagen": 30
+        },
+        {
+          "brief_code": "CAK.INCASSO-MISLUKT",
+          "omschrijving": "Bericht over mislukte automatische incasso",
+          "typische_dag_na_overlijden_min": 30,
+          "typische_dag_na_overlijden_max": 90,
+          "voorwaarden": [
+            "bankrekening overledene bevroren"
+          ],
+          "wettelijke_termijn_dagen": 14
+        }
+      ]
+    },
+    {
+      "organisatie": "CJIB",
+      "evenementen": [
+        {
+          "brief_code": "CJIB.OPENSTAANDE-BOETE",
+          "omschrijving": "Openstaande boete / vordering",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 90,
+          "voorwaarden": [
+            "openstaande boete bij CJIB"
+          ],
+          "wettelijke_termijn_dagen": 42
+        }
+      ]
+    },
+    {
+      "organisatie": "DUO",
+      "evenementen": [
+        {
+          "brief_code": "DUO.STUDIESCHULD-VERVALT",
+          "omschrijving": "Bevestiging vervallen studieschuld bij overlijden",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 60,
+          "voorwaarden": [
+            "overledene had openstaande studieschuld"
+          ],
+          "wettelijke_termijn_dagen": null
+        }
+      ]
+    },
+    {
+      "organisatie": "Gemeente",
+      "evenementen": [
+        {
+          "brief_code": "GEMEENTE.CONDOLEANCE",
+          "omschrijving": "Condoleancebrief gemeente",
+          "typische_dag_na_overlijden_min": 3,
+          "typische_dag_na_overlijden_max": 7,
+          "voorwaarden": [
+            "contactgegevens partner doorgegeven bij aangifte overlijden"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "GEMEENTE.PARKEERVERGUNNING",
+          "omschrijving": "Brief parkeervergunning overnemen of beëindigen",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 60,
+          "voorwaarden": [
+            "overledene had parkeervergunning"
+          ],
+          "wettelijke_termijn_dagen": 30
+        },
+        {
+          "brief_code": "GEMEENTE.LOKALE-BELASTING",
+          "omschrijving": "Aanslag gemeentelijke belastingen",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 90,
+          "voorwaarden": [
+            "overlijden in de eerste maanden van het belastingjaar"
+          ],
+          "wettelijke_termijn_dagen": 42
+        }
+      ]
+    },
+    {
+      "organisatie": "KVK",
+      "evenementen": [
+        {
+          "brief_code": "KVK.UITSCHRIJVING",
+          "omschrijving": "Bevestiging uitschrijving onderneming",
+          "typische_dag_na_overlijden_min": 7,
+          "typische_dag_na_overlijden_max": 30,
+          "voorwaarden": [
+            "overledene had eenmanszaak of vof-aandeel"
+          ],
+          "wettelijke_termijn_dagen": 30
+        }
+      ]
+    },
+    {
+      "organisatie": "RDW",
+      "evenementen": [
+        {
+          "brief_code": "RDW.S-0068",
+          "omschrijving": "Informatiebrief op naam zetten voertuig",
+          "typische_dag_na_overlijden_min": 5,
+          "typische_dag_na_overlijden_max": 9,
+          "voorwaarden": [
+            "overledene heeft een voertuig op naam"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "RDW.S-1712",
+          "omschrijving": "Herinnering overschrijven na overlijden",
+          "typische_dag_na_overlijden_min": 80,
+          "typische_dag_na_overlijden_max": 100,
+          "voorwaarden": [
+            "voertuig nog niet overgeschreven na 3 maanden"
+          ],
+          "wettelijke_termijn_dagen": 90
+        },
+        {
+          "brief_code": "RDW.S-1713",
+          "omschrijving": "Beëindiging tenaamstelling 6 maanden na overlijden",
+          "typische_dag_na_overlijden_min": 175,
+          "typische_dag_na_overlijden_max": 195,
+          "voorwaarden": [
+            "voertuig nog niet overgeschreven na 6 maanden"
+          ],
+          "wettelijke_termijn_dagen": null
+        }
+      ]
+    },
+    {
+      "organisatie": "RVO",
+      "evenementen": [
+        {
+          "brief_code": "RVO.WBSO-VERPLICHTING",
+          "omschrijving": "WBSO uren-verantwoording",
+          "typische_dag_na_overlijden_min": 30,
+          "typische_dag_na_overlijden_max": 180,
+          "voorwaarden": [
+            "overledene had lopende WBSO-toezegging"
+          ],
+          "wettelijke_termijn_dagen": 90
+        }
+      ]
+    },
+    {
+      "organisatie": "SVB",
+      "evenementen": [
+        {
+          "brief_code": "SVB.ANW-INFO",
+          "omschrijving": "ANW informatiebrief",
+          "typische_dag_na_overlijden_min": 3,
+          "typische_dag_na_overlijden_max": 7,
+          "voorwaarden": [
+            "surviving partner under AOW age"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "SVB.OVERLIJDENSUITKERING",
+          "omschrijving": "Overlijdensuitkering AOW (1 maand AOW + vakantiegeld)",
+          "typische_dag_na_overlijden_min": 5,
+          "typische_dag_na_overlijden_max": 12,
+          "voorwaarden": [
+            "overledene ontving AOW",
+            "achterblijvende partner"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "SVB.JAAROPGAVE",
+          "omschrijving": "Jaaropgave AOW (papier, niet digitaal te vervangen)",
+          "typische_dag_na_overlijden_min": 5,
+          "typische_dag_na_overlijden_max": 12,
+          "voorwaarden": [
+            "overledene ontving AOW"
+          ],
+          "wettelijke_termijn_dagen": null
+        }
+      ]
+    },
+    {
+      "organisatie": "Toeslagen",
+      "evenementen": [
+        {
+          "brief_code": "TOESLAGEN.HERZIENE-BESCHIKKING-ZORG",
+          "omschrijving": "Herziene beschikking zorgtoeslag",
+          "typische_dag_na_overlijden_min": 7,
+          "typische_dag_na_overlijden_max": 28,
+          "voorwaarden": [
+            "overledene ontving zorgtoeslag"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "TOESLAGEN.TERUGVORDERING-ZORG",
+          "omschrijving": "Terugvorderingsbeschikking zorgtoeslag",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 35,
+          "voorwaarden": [
+            "herziene beschikking zorgtoeslag verstuurd"
+          ],
+          "wettelijke_termijn_dagen": 42
+        },
+        {
+          "brief_code": "TOESLAGEN.HERZIENE-BESCHIKKING-HUUR",
+          "omschrijving": "Herziene beschikking huurtoeslag (partner)",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 60,
+          "voorwaarden": [
+            "partner ontvangt huurtoeslag — herberekening na overlijden"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "TOESLAGEN.DEFINITIEVE-TOEKENNING-ZORG",
+          "omschrijving": "Definitieve toekenning zorgtoeslag (jaarafsluiting)",
+          "typische_dag_na_overlijden_min": 330,
+          "typische_dag_na_overlijden_max": 400,
+          "voorwaarden": [
+            "overledene ontving zorgtoeslag"
+          ],
+          "wettelijke_termijn_dagen": null
+        },
+        {
+          "brief_code": "TOESLAGEN.NAHEFFING-LATE-ZORG",
+          "omschrijving": "Naheffing of uitvraag rekeningnummer (na definitieve toekenning)",
+          "typische_dag_na_overlijden_min": 335,
+          "typische_dag_na_overlijden_max": 410,
+          "voorwaarden": [
+            "openstaand of teveel betaald bedrag bij definitieve toekenning"
+          ],
+          "wettelijke_termijn_dagen": 42
+        }
+      ]
+    },
+    {
+      "organisatie": "UWV",
+      "evenementen": [
+        {
+          "brief_code": "UWV.STOPZETTING",
+          "omschrijving": "Stopzetting WW/WIA-uitkering",
+          "typische_dag_na_overlijden_min": 7,
+          "typische_dag_na_overlijden_max": 21,
+          "voorwaarden": [
+            "overledene had WW- of WIA-uitkering"
+          ],
+          "wettelijke_termijn_dagen": null
+        }
+      ]
+    },
+    {
+      "organisatie": "Waterschap",
+      "evenementen": [
+        {
+          "brief_code": "WS.AANSLAG",
+          "omschrijving": "Waterschapsbelasting (peildatum 1 januari)",
+          "typische_dag_na_overlijden_min": 14,
+          "typische_dag_na_overlijden_max": 120,
+          "voorwaarden": [
+            "overledene was bewoner op 1 januari van het belastingjaar"
+          ],
+          "wettelijke_termijn_dagen": 42
+        }
+      ]
+    }
+  ]
+}

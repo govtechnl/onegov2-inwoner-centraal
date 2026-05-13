@@ -1,0 +1,178 @@
+{
+  "_comment": "Ondernemer persona — eenmanszaak, exercises layer 6 (KVK + RVO/WBSO).",
+  "persona": "Ondernemer",
+  "overledene": {
+    "id": "urn:overlijden:test:00000000-0000-4000-8000-000000000301",
+    "synthetic": true,
+    "bron": "onegov2-inwoner-centraal-generator",
+    "overledene": {
+      "bsn": "666778889",
+      "geslachtsnaam": "Aydin",
+      "voornamen": "Selim",
+      "geboortedatum": "1968-10-21",
+      "overlijdensdatum": "2025-05-22",
+      "gemeente_overlijden": "Eindhoven",
+      "woonadres": {
+        "straat": "Stratumseind",
+        "huisnummer": "55",
+        "postcode": "5611 EV",
+        "woonplaats": "Eindhoven",
+        "verzorgingstehuis": false
+      }
+    },
+    "partner": {
+      "bsn": "777889990",
+      "geslachtsnaam": "Aydin-Yilmaz",
+      "voornamen": "Elif",
+      "geboortedatum": "1971-03-08",
+      "woonadres": {
+        "straat": "Stratumseind",
+        "huisnummer": "55",
+        "postcode": "5611 EV",
+        "woonplaats": "Eindhoven",
+        "verzorgingstehuis": false
+      }
+    },
+    "relatie": {
+      "vorm": "huwelijk",
+      "aanvang": "1995-07-04"
+    }
+  },
+  "verplichtingen": [
+    {
+      "id": "urn:verplichting:test:00000000-0000-4000-8000-000000000310",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "666778889",
+      "organisatie": "Belastingdienst",
+      "categorie": "aanslag_ib",
+      "omschrijving": "Aangifte IB jaar van overlijden — ondernemersdeel (winst uit onderneming)",
+      "bedrag": null,
+      "peildatum": "2025-05-22",
+      "vervaldatum": "2026-05-01",
+      "status": "open",
+      "wettelijke_termijn_dagen": 240
+    },
+    {
+      "id": "urn:verplichting:test:00000000-0000-4000-8000-000000000311",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "666778889",
+      "organisatie": "Belastingdienst",
+      "categorie": "erfbelasting",
+      "omschrijving": "Aangifte erfbelasting (incl. bedrijfsopvolgingsregeling check)",
+      "bedrag": null,
+      "peildatum": "2025-05-22",
+      "vervaldatum": "2026-01-22",
+      "status": "open",
+      "wettelijke_termijn_dagen": 240
+    }
+  ],
+  "rechten": [
+    {
+      "id": "urn:recht:test:00000000-0000-4000-8000-000000000320",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_partner": "777889990",
+      "organisatie": "Toeslagen",
+      "categorie": "toeslag_herberekening",
+      "omschrijving": "Herberekening toeslagen op basis van nieuw inkomen",
+      "geschat_maandbedrag": null,
+      "voorwaarden": ["Inkomen wijzigt na wegvallen ondernemerswinst"],
+      "status": "aanvraag_open"
+    }
+  ],
+  "correspondentie": [
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000330",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "666778889",
+      "organisatie": "KVK",
+      "brief_code": "KVK.UITSCHRIJVING",
+      "type": "actiebrief",
+      "verzonden_op": "2025-05-29",
+      "dagen_na_overlijden": 7,
+      "aanhef": "Aan de erven van Aydin Restauratie",
+      "geadresseerde": "erven",
+      "adres": {
+        "straat": "Stratumseind", "huisnummer": "55",
+        "postcode": "5611 EV", "woonplaats": "Eindhoven",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": true,
+      "actie_omschrijving": "Onderneming uitschrijven of voortzetten — formulier 17a",
+      "wettelijke_reactietermijn_dagen": 56
+    },
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000331",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "666778889",
+      "organisatie": "RVO",
+      "brief_code": "RVO.WBSO-VERPLICHTING",
+      "type": "actiebrief",
+      "verzonden_op": "2025-06-12",
+      "dagen_na_overlijden": 21,
+      "aanhef": "Aan de erven van Aydin Restauratie",
+      "geadresseerde": "erven",
+      "adres": {
+        "straat": "Stratumseind", "huisnummer": "55",
+        "postcode": "5611 EV", "woonplaats": "Eindhoven",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": true,
+      "actie_omschrijving": "Lopende WBSO-verplichting (uren-administratie) afhandelen of beëindigen",
+      "wettelijke_reactietermijn_dagen": 90
+    },
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000332",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "666778889",
+      "organisatie": "Belastingdienst",
+      "brief_code": "BD.ERVENBRIEF",
+      "type": "actiebrief",
+      "verzonden_op": "2025-06-05",
+      "dagen_na_overlijden": 14,
+      "aanhef": "Aan de erven van",
+      "geadresseerde": "erven",
+      "adres": {
+        "straat": "Stratumseind", "huisnummer": "55",
+        "postcode": "5611 EV", "woonplaats": "Eindhoven",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": true,
+      "actie_omschrijving": "Contactpersoon doorgeven aan Belastingdienst",
+      "wettelijke_reactietermijn_dagen": 30
+    }
+  ],
+  "kvk_rvo": {
+    "synthetic": true,
+    "bron": "onegov2-inwoner-centraal-generator",
+    "bsn_overledene": "666778889",
+    "kvk_nummer": "55661234",
+    "handelsnaam": "Aydin Restauratie",
+    "rechtsvorm": "eenmanszaak",
+    "btw_status": "actief",
+    "wbso_verplichtingen": [
+      {
+        "dossiernummer": "WBSO845221",
+        "looptijd_einde": "2025-12-31",
+        "uren_te_verantwoorden": 320
+      }
+    ],
+    "rvo_subsidies": [
+      {
+        "regeling": "EIA",
+        "dossiernummer": "RVO772019",
+        "looptijd_einde": "2026-09-30",
+        "verplichtingen": [
+          "Jaarlijkse voortgangsrapportage",
+          "Eindafrekening bij beëindiging onderneming"
+        ]
+      }
+    ]
+  },
+  "_uitdaging": "Bij overlijden van een eenmanszaakondernemer lopen WBSO en RVO-verplichtingen door. Erven hebben geen toegang tot eHerkenning."
+}

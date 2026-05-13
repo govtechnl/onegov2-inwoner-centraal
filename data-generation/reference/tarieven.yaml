@@ -1,0 +1,49 @@
+# Reference: bedragen en tarieven (synthetisch, indicatief, NIET wetgeving)
+#
+# Gebruikt door de generator om realistische ranges te produceren.
+# Geen formele bron — schatting o.b.v. publieke informatie 2024/2025.
+
+aow:
+  bruto_per_maand_alleenstaand: '1500.00'
+  bruto_per_maand_gehuwd: '1050.00'
+  vakantiegeld_jaarlijks: '850.00'
+
+anw:
+  bruto_per_maand_basis: '1690.00'
+  inkomenstoets_grens: '850.00'
+
+zorgtoeslag:
+  jaar_max_alleenstaand: '1670.00'
+  jaar_max_paar: '3160.00'
+
+huurtoeslag:
+  jaar_max_alleenstaand: '4200.00'
+  jaar_max_paar: '6500.00'
+
+erfbelasting:
+  vrijstelling_partner: '795156.00'
+  vrijstelling_kind: '25187.00'
+  termijn_aangifte_dagen: 240
+
+wlz_eigen_bijdrage:
+  per_maand_min: '180.00'
+  per_maand_max: '2750.00'
+
+inkomstenbelasting:
+  schijf_1_grens_per_jaar: '38441.00'
+  schijf_1_tarief: '0.3697'
+  schijf_2_tarief: '0.4950'
+
+waterschapsbelasting:
+  per_huishouden_per_jaar_min: '180.00'
+  per_huishouden_per_jaar_max: '420.00'
+  peildatum: '01-01'
+
+cjib_boete:
+  bedrag_min: '50.00'
+  bedrag_max: '450.00'
+
+duo_studieschuld:
+  bedrag_min: '0.00'
+  bedrag_max: '40000.00'
+  vervalt_bij_overlijden: true

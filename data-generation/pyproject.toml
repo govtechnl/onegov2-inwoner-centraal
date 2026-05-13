@@ -1,0 +1,46 @@
+[project]
+name = "onegov2-inwoner-centraal-data"
+version = "0.1.0"
+description = "Synthetic data generator for the OneGov #2 Inwoner Centraal — Nabestaanden challenge"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+authors = [
+    { name = "GovTech NL / ICTU and contributors" }
+]
+dependencies = [
+    "faker>=30.0",
+    "pydantic>=2.8",
+    "pyyaml>=6.0",
+    "jsonschema>=4.23",
+    "polars>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+onegov2-generate = "generate:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["generate"]
+
+[tool.setuptools.packages.find]
+include = ["generators*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

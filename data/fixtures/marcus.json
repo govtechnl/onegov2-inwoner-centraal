@@ -1,0 +1,166 @@
+{
+  "_comment": "Marcus persona — 48y, registered partnership, partner died suddenly. Tests DigiD-machtiging path: Marcus's DigiD lapsed because he never used it.",
+  "persona": "Marcus",
+  "overledene": {
+    "id": "urn:overlijden:test:00000000-0000-4000-8000-000000000101",
+    "synthetic": true,
+    "bron": "onegov2-inwoner-centraal-generator",
+    "overledene": {
+      "bsn": "222333444",
+      "geslachtsnaam": "El Khattabi",
+      "voornamen": "Yasmina",
+      "geboortedatum": "1979-11-02",
+      "overlijdensdatum": "2025-07-08",
+      "gemeente_overlijden": "Rotterdam",
+      "woonadres": {
+        "straat": "Schiekade",
+        "huisnummer": "112",
+        "postcode": "3032 AL",
+        "woonplaats": "Rotterdam",
+        "verzorgingstehuis": false
+      }
+    },
+    "partner": {
+      "bsn": "333444556",
+      "geslachtsnaam": "Visser",
+      "voornamen": "Marcus",
+      "geboortedatum": "1977-04-19",
+      "woonadres": {
+        "straat": "Schiekade",
+        "huisnummer": "112",
+        "postcode": "3032 AL",
+        "woonplaats": "Rotterdam",
+        "verzorgingstehuis": false
+      }
+    },
+    "relatie": {
+      "vorm": "geregistreerd_partnerschap",
+      "aanvang": "2014-09-12"
+    }
+  },
+  "verplichtingen": [
+    {
+      "id": "urn:verplichting:test:00000000-0000-4000-8000-000000000110",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "222333444",
+      "organisatie": "Belastingdienst",
+      "categorie": "aanslag_ib",
+      "omschrijving": "Aangifte IB jaar van overlijden (F-biljet)",
+      "bedrag": null,
+      "peildatum": "2025-07-08",
+      "vervaldatum": "2026-05-01",
+      "status": "open",
+      "wettelijke_termijn_dagen": 240
+    },
+    {
+      "id": "urn:verplichting:test:00000000-0000-4000-8000-000000000111",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "222333444",
+      "organisatie": "CJIB",
+      "categorie": "boete",
+      "omschrijving": "Openstaande verkeersboete",
+      "bedrag": { "bedrag": "147.00", "valuta": "EUR" },
+      "peildatum": "2025-06-12",
+      "vervaldatum": "2025-08-15",
+      "status": "open",
+      "wettelijke_termijn_dagen": 42
+    }
+  ],
+  "rechten": [
+    {
+      "id": "urn:recht:test:00000000-0000-4000-8000-000000000120",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_partner": "333444556",
+      "organisatie": "SVB",
+      "categorie": "anw",
+      "omschrijving": "ANW-uitkering (geregistreerd partnerschap, onder AOW-leeftijd)",
+      "geschat_maandbedrag": { "bedrag": "1689.00", "valuta": "EUR" },
+      "voorwaarden": [
+        "Achterblijvende partner onder AOW-leeftijd",
+        "Geboren voor 1950 OF kind onder 18 OF arbeidsongeschikt — anders inkomensafhankelijk"
+      ],
+      "status": "mogelijk_recht"
+    },
+    {
+      "id": "urn:recht:test:00000000-0000-4000-8000-000000000121",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_partner": "333444556",
+      "organisatie": "UWV",
+      "categorie": "nabestaandenpensioen",
+      "omschrijving": "Mogelijk recht op nabestaandenpensioen via werkgever overledene",
+      "geschat_maandbedrag": null,
+      "voorwaarden": ["Pensioenregeling werkgever moet partnerpensioen kennen"],
+      "status": "mogelijk_recht"
+    }
+  ],
+  "correspondentie": [
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000130",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "222333444",
+      "organisatie": "SVB",
+      "brief_code": "SVB.ANW-INFO",
+      "type": "informatiebrief",
+      "verzonden_op": "2025-07-15",
+      "dagen_na_overlijden": 7,
+      "aanhef": "Geachte heer Marcus Visser",
+      "geadresseerde": "partner",
+      "adres": {
+        "straat": "Schiekade", "huisnummer": "112",
+        "postcode": "3032 AL", "woonplaats": "Rotterdam",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": true,
+      "actie_omschrijving": "ANW aanvragen via Mijn SVB (DigiD vereist)",
+      "wettelijke_reactietermijn_dagen": null
+    },
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000131",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "222333444",
+      "organisatie": "Belastingdienst",
+      "brief_code": "BD.ERVENBRIEF",
+      "type": "actiebrief",
+      "verzonden_op": "2025-07-22",
+      "dagen_na_overlijden": 14,
+      "aanhef": "Aan de erven van",
+      "geadresseerde": "erven",
+      "adres": {
+        "straat": "Schiekade", "huisnummer": "112",
+        "postcode": "3032 AL", "woonplaats": "Rotterdam",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": true,
+      "actie_omschrijving": "Contactpersoon doorgeven aan Belastingdienst",
+      "wettelijke_reactietermijn_dagen": 30
+    },
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000132",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "222333444",
+      "organisatie": "CJIB",
+      "brief_code": "CJIB.OPENSTAANDE-BOETE",
+      "type": "aanmaning",
+      "verzonden_op": "2025-08-01",
+      "dagen_na_overlijden": 24,
+      "aanhef": "Aan Yasmina El Khattabi",
+      "geadresseerde": "overledene",
+      "adres": {
+        "straat": "Schiekade", "huisnummer": "112",
+        "postcode": "3032 AL", "woonplaats": "Rotterdam",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": true,
+      "actie_omschrijving": "Boete betalen of doorgeven dat persoon is overleden",
+      "wettelijke_reactietermijn_dagen": 42
+    }
+  ],
+  "_uitdaging": "Marcus heeft jarenlang geen DigiD gebruikt en kan niet inloggen op MijnOverheid. Toont noodzaak van DigiD-machtiging of nabestaanden-loket."
+}

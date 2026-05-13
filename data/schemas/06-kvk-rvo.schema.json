@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/govtechnl/onegov2-inwoner-centraal/data/schemas/06-kvk-rvo.schema.json",
+  "title": "KVK / RVO business data of the deceased (optional)",
+  "description": "Records exist for ~10% of deceased who ran a business.",
+  "type": "object",
+  "required": ["synthetic", "bron", "bsn_overledene", "kvk_nummer", "handelsnaam", "rechtsvorm", "btw_status", "wbso_verplichtingen", "rvo_subsidies"],
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": { "const": true },
+    "bron": { "const": "onegov2-inwoner-centraal-generator" },
+    "bsn_overledene": { "type": "string", "pattern": "^[0-9]{9}$" },
+    "kvk_nummer": { "type": "string", "pattern": "^[0-9]{8}$" },
+    "handelsnaam": { "type": "string", "minLength": 1 },
+    "rechtsvorm": { "enum": ["eenmanszaak", "vof", "bv"] },
+    "btw_status": { "enum": ["actief", "vrijgesteld", "kor"] },
+    "wbso_verplichtingen": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["dossiernummer", "looptijd_einde", "uren_te_verantwoorden"],
+        "additionalProperties": false,
+        "properties": {
+          "dossiernummer": { "type": "string", "minLength": 1 },
+          "looptijd_einde": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "uren_te_verantwoorden": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "rvo_subsidies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["regeling", "dossiernummer", "looptijd_einde", "verplichtingen"],
+        "additionalProperties": false,
+        "properties": {
+          "regeling": { "type": "string", "minLength": 1 },
+          "dossiernummer": { "type": "string", "minLength": 1 },
+          "looptijd_einde": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "verplichtingen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

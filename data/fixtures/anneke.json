@@ -1,0 +1,148 @@
+{
+  "_comment": "Anneke persona — 71y, low digital skill, husband Henk (74) overleden. Tests plain-language, paper-channel and proactive support flows.",
+  "persona": "Anneke",
+  "overledene": {
+    "id": "urn:overlijden:test:00000000-0000-4000-8000-000000000201",
+    "synthetic": true,
+    "bron": "onegov2-inwoner-centraal-generator",
+    "overledene": {
+      "bsn": "444555667",
+      "geslachtsnaam": "Veldkamp",
+      "voornamen": "Henk",
+      "geboortedatum": "1951-02-28",
+      "overlijdensdatum": "2025-09-01",
+      "gemeente_overlijden": "Assen",
+      "woonadres": {
+        "straat": "Lindelaan",
+        "huisnummer": "8",
+        "postcode": "9401 PJ",
+        "woonplaats": "Assen",
+        "verzorgingstehuis": false
+      }
+    },
+    "partner": {
+      "bsn": "555667778",
+      "geslachtsnaam": "Veldkamp-Smit",
+      "voornamen": "Anneke",
+      "geboortedatum": "1954-05-17",
+      "woonadres": {
+        "straat": "Lindelaan",
+        "huisnummer": "8",
+        "postcode": "9401 PJ",
+        "woonplaats": "Assen",
+        "verzorgingstehuis": false
+      }
+    },
+    "relatie": {
+      "vorm": "huwelijk",
+      "aanvang": "1976-08-14"
+    }
+  },
+  "verplichtingen": [
+    {
+      "id": "urn:verplichting:test:00000000-0000-4000-8000-000000000210",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "444555667",
+      "organisatie": "Toeslagen",
+      "categorie": "toeslag",
+      "omschrijving": "Herziening zorgtoeslag — nu eenpersoonshuishouden",
+      "bedrag": { "bedrag": "0.00", "valuta": "EUR" },
+      "peildatum": "2025-10-01",
+      "vervaldatum": null,
+      "status": "in_behandeling",
+      "wettelijke_termijn_dagen": null
+    }
+  ],
+  "rechten": [
+    {
+      "id": "urn:recht:test:00000000-0000-4000-8000-000000000220",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_partner": "555667778",
+      "organisatie": "SVB",
+      "categorie": "overig",
+      "omschrijving": "Overlijdensuitkering AOW (1 maand)",
+      "geschat_maandbedrag": { "bedrag": "920.50", "valuta": "EUR" },
+      "voorwaarden": ["Overledene ontving AOW", "Achterblijvende partner"],
+      "status": "toegekend"
+    },
+    {
+      "id": "urn:recht:test:00000000-0000-4000-8000-000000000221",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_partner": "555667778",
+      "organisatie": "SVB",
+      "categorie": "overig",
+      "omschrijving": "Verhoging AOW van partnertoeslag naar AOW-alleenstaande",
+      "geschat_maandbedrag": { "bedrag": "1480.00", "valuta": "EUR" },
+      "voorwaarden": ["Anneke ontvangt al AOW", "Tarief wijzigt automatisch"],
+      "status": "toegekend"
+    }
+  ],
+  "correspondentie": [
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000230",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "444555667",
+      "organisatie": "Gemeente",
+      "brief_code": "GEMEENTE.CONDOLEANCE",
+      "type": "condoleance",
+      "verzonden_op": "2025-09-05",
+      "dagen_na_overlijden": 4,
+      "aanhef": "Beste mevrouw Veldkamp-Smit",
+      "geadresseerde": "partner",
+      "adres": {
+        "straat": "Lindelaan", "huisnummer": "8",
+        "postcode": "9401 PJ", "woonplaats": "Assen",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": false, "actie_omschrijving": null,
+      "wettelijke_reactietermijn_dagen": null
+    },
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000231",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "444555667",
+      "organisatie": "SVB",
+      "brief_code": "SVB.OVERLIJDENSUITKERING",
+      "type": "informatiebrief",
+      "verzonden_op": "2025-09-08",
+      "dagen_na_overlijden": 7,
+      "aanhef": "Beste mevrouw Veldkamp-Smit",
+      "geadresseerde": "partner",
+      "adres": {
+        "straat": "Lindelaan", "huisnummer": "8",
+        "postcode": "9401 PJ", "woonplaats": "Assen",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": false,
+      "actie_omschrijving": "U hoeft niets te doen — wij maken het bedrag zelf over",
+      "wettelijke_reactietermijn_dagen": null
+    },
+    {
+      "id": "urn:brief:test:00000000-0000-4000-8000-000000000232",
+      "synthetic": true,
+      "bron": "onegov2-inwoner-centraal-generator",
+      "bsn_overledene": "444555667",
+      "organisatie": "Belastingdienst",
+      "brief_code": "BD.ERVENBRIEF",
+      "type": "actiebrief",
+      "verzonden_op": "2025-09-15",
+      "dagen_na_overlijden": 14,
+      "aanhef": "Aan de erven van Henk Veldkamp",
+      "geadresseerde": "erven",
+      "adres": {
+        "straat": "Lindelaan", "huisnummer": "8",
+        "postcode": "9401 PJ", "woonplaats": "Assen",
+        "verzorgingstehuis": false
+      },
+      "actie_vereist": true,
+      "actie_omschrijving": "Geef een contactpersoon door (formulier zit erbij)",
+      "wettelijke_reactietermijn_dagen": 30
+    }
+  ],
+  "_uitdaging": "Anneke kan niet uit de voeten met DigiD en MijnOverheid. Brieven moeten in B1-taal en bij voorkeur op papier."
+}

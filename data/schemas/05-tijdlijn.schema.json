@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/govtechnl/onegov2-inwoner-centraal/data/schemas/05-tijdlijn.schema.json",
+  "title": "Reference timeline of expected government actions",
+  "description": "Reference timeline, independent of any specific deceased person.",
+  "type": "object",
+  "required": ["synthetic", "bron", "organisaties"],
+  "additionalProperties": false,
+  "properties": {
+    "synthetic": { "const": true },
+    "bron": { "const": "onegov2-inwoner-centraal-generator" },
+    "organisaties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["organisatie", "evenementen"],
+        "additionalProperties": false,
+        "properties": {
+          "organisatie": {
+            "enum": [
+              "Gemeente", "SVB", "CAK", "RDW", "Waterschap", "Belastingdienst",
+              "Toeslagen", "RVO", "CJIB", "UWV", "DUO", "KVK"
+            ]
+          },
+          "evenementen": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "brief_code", "omschrijving",
+                "typische_dag_na_overlijden_min", "typische_dag_na_overlijden_max",
+                "voorwaarden"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "brief_code": { "type": "string", "minLength": 1 },
+                "omschrijving": { "type": "string", "minLength": 1 },
+                "typische_dag_na_overlijden_min": { "type": "integer", "minimum": 0 },
+                "typische_dag_na_overlijden_max": { "type": "integer", "minimum": 0 },
+                "voorwaarden": { "type": "array", "items": { "type": "string" } },
+                "wettelijke_termijn_dagen": {
+                  "oneOf": [{ "type": "null" }, { "type": "integer", "minimum": 0 }]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
