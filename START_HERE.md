@@ -10,8 +10,14 @@ If you are starting this challenge now, use this order.
 
 ## 2) Pick your track (5 min)
 
-- Track 1: bundled first letter.
-- Track 2: personalized total overview.
+The scenario is one integrated whole. Inside it the brief distinguishes
+three actions a good solution should cover: **informeren**, **toegang
+geven**, and **handelen namens**. Whichever track you pick below, those
+three actions should be recognisable in your prototype.
+
+- Track 1: bundled first letter (*De gebundelde eerste brief*).
+- Track 2: personalised total overview (*Het gepersonaliseerde
+  totaaloverzicht*).
 - Hybrid: do a minimal end-to-end flow covering both.
 
 ## 3) Generate synthetic data (15 min)

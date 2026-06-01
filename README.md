@@ -26,13 +26,34 @@ the *doenvermogen* (capacity to act under emotional pressure) is at its lowest.
 view of their rights and obligations across the entire government - without
 making them chase it themselves?**
 
-The full brief is in [CHALLENGE.md](CHALLENGE.md).
+The full brief is in [CHALLENGE.md](CHALLENGE.md). The original PDF brief
+from ICTU is at the repo root:
+[OneGov#2_Challenge_Brief_Inwoner_Centraal_Nabestaanden_ICTU.docx.pdf](OneGov%232_Challenge_Brief_Inwoner_Centraal_Nabestaanden_ICTU.docx.pdf).
 
 New teams can begin with [START_HERE.md](START_HERE.md).
 
-## Two tracks
+## Framing: one integrated scenario, three actions
 
-Teams pick one (or show how they connect):
+The challenge is one integrated scenario: a bundled first message from the
+whole government, plus a digital place where the bereaved partner can keep
+track. Within that scenario the brief distinguishes three actions a good
+solution should cover:
+
+1. **Informeren.** Tell the bereaved partner, in plain language and at the
+   right moment, what is coming and what is being arranged.
+2. **Toegang geven.** Give the bereaved partner access to the deceased's
+   relevant records (for example via a *nabestaandenmachtiging*) and to a
+   single loket for questions.
+3. **Handelen namens.** Let the government pre-arrange what can be
+   pre-arranged (e.g. stopping toeslagen, deferring obligations) instead of
+   pushing that work onto the bereaved partner.
+
+## Two practical steps
+
+As a working form, ICTU has split the ambition into two concrete steps.
+Teams pick one as their main focus or show how both connect. **Whichever
+step you pick, the three actions above should be recognisable in your
+prototype.**
 
 1. **Stap 1: De gebundelde eerste brief.** A single, empathic letter on
    behalf of the whole government, sent shortly after the death.
@@ -80,6 +101,22 @@ any production use.
 - **Code** is released under the [Apache License 2.0](LICENSE).
 - **Data, documentation, and challenge text** are released under
   [CC BY 4.0](LICENSE-DATA).
+
+## Submission
+
+Teams submit through **Alkemio**, the central submission and review point
+for the OneGov #2 jury.
+
+- **Alkemio submission link:** _TODO: link to be added by the organiser._
+- A team submits: a repository link (GitHub, GitLab or similar; this does
+  not have to be a pull request against this repo, teams build their own
+  prototype repository), a working prototype or demo, a pitch deck (max.
+  10 slides), and a short description of back-end choices.
+- The Alkemio submission is what the jury scores during the hackathon.
+  Pull requests against this repository are welcome for high-quality
+  reusable artefacts (schemas, fixtures, generator improvements,
+  documentation), and they remain leading for the post-hackathon review
+  and merge of those contributions into this central repository.
 
 ## Contributing
 

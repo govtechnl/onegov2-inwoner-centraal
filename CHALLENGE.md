@@ -7,8 +7,10 @@
 > **Challenge owners:** Natalie Moreno Robles & Ingrid Verhage (ICTU)
 > **Contact:** [hack@govtechnl.nl](mailto:hack@govtechnl.nl)
 
-This is an English working translation of the original Dutch challenge brief.
-The authoritative source is the challenge brief on Junction.
+This is an English working translation of the original Dutch challenge
+brief. The authoritative source is the PDF brief at the root of this
+repository:
+[OneGov#2_Challenge_Brief_Inwoner_Centraal_Nabestaanden_ICTU.docx.pdf](OneGov%232_Challenge_Brief_Inwoner_Centraal_Nabestaanden_ICTU.docx.pdf).
 
 ---
 
@@ -52,10 +54,29 @@ and fines - harmful to the bereaved and costly for government organisations.
 > burden, through a proactive, personalised approach in which the government
 > pre-arranges as much as possible itself?*
 
+## One integrated scenario, three actions
+
+The brief presents the ambition as one integrated scenario: a bundled
+first message on behalf of the whole government, plus a digital place
+where the bereaved partner can keep track. Within that scenario, three
+actions matter:
+
+1. **Informeren.** Tell the bereaved partner, in plain language and at
+   the right moment, what is coming and what is being arranged on their
+   behalf.
+2. **Toegang geven.** Give the bereaved partner access to the deceased's
+   relevant records (for example via a *nabestaandenmachtiging*) and to a
+   single loket for questions.
+3. **Handelen namens.** Let the government pre-arrange what can be
+   pre-arranged (e.g. stopping toeslagen, deferring obligations) instead
+   of pushing that work onto the bereaved partner.
+
 ## Two steps toward the ideal situation
 
-ICTU has framed the ambition in two concrete steps. Teams pick one as their
-focus, or show how both connect.
+ICTU has framed the ambition in two concrete steps as a practical work
+form. Teams pick one as their focus, or show how both connect. **Whichever
+step you pick, the three actions above (informeren, toegang geven,
+handelen namens) should be recognisable in your prototype.**
 
 ### Step 1: The bundled first letter
 
@@ -208,8 +229,8 @@ so teams can start immediately.
    be confirmed.
 
 > ℹ️ Datasets are published in this repository at the latest **two weeks
-> before the hackathon**, and via the Junction platform. Natalie and Ingrid
-> are available on the day for substantive questions about the data and
+> before the hackathon**, and via Alkemio. Natalie and Ingrid are
+> available on the day for substantive questions about the data and
 > domain.
 
 ## Judging criteria
@@ -276,9 +297,12 @@ frameworks. You do not need to be a lawyer, but it helps to know them.
   Personen (BRP). However, this signal does not automatically reach all
   government organisations. In the prototype you may assume that linkage on
   this signal is legally possible (or will be).
-- **Existing standards.** Alignment with the NL API Strategy, the
-  Berichtenbox (Logius), and Common Ground architecture is appreciated by
-  the jury.
+- **Existing standards.** Alignment with the **Federatief Datastelsel
+  (FDS)** standards and principles is required by the brief; alignment
+  with **NORA** is appreciated by the jury. The NL API Strategy, the
+  Berichtenbox (Logius), and Common Ground architecture are the practical
+  building blocks teams reason from. See
+  [docs/architectuur-context.md](docs/architectuur-context.md).
 
 See [docs/juridisch-kader.md](docs/juridisch-kader.md) for more detail.
 
@@ -291,6 +315,26 @@ See [docs/juridisch-kader.md](docs/juridisch-kader.md) for more detail.
 - [developer.overheid.nl](https://developer.overheid.nl): NL API Strategy.
 - [commonground.nl](https://commonground.nl): Common Ground architecture principles.
 - [resources/](resources/): original source material in this repo (DOCX, PPTX, PDF).
+
+## Submission
+
+Teams submit through **Alkemio**, the central submission and review point
+for the OneGov #2 jury.
+
+- **Alkemio submission link:** _TODO: link to be added by the organiser._
+- A team submits:
+  - a **repository link** (GitHub, GitLab or similar; teams build their
+    own prototype repository, this does not have to be a pull request
+    against this repo),
+  - a **working prototype or demo**,
+  - a **pitch deck** (max. 10 slides),
+  - a **short description of back-end choices** and which existing
+    building blocks the prototype plugs into.
+- The Alkemio submission is what the jury scores during the hackathon.
+  Pull requests against this repository remain welcome for high-quality
+  reusable artefacts (schemas, fixtures, generator improvements,
+  documentation), and are leading for the post-hackathon review and merge
+  of those contributions into this central repository.
 
 ## Disclaimer
 
