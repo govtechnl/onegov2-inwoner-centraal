@@ -298,10 +298,11 @@ frameworks. You do not need to be a lawyer, but it helps to know them.
   government organisations. In the prototype you may assume that linkage on
   this signal is legally possible (or will be).
 - **Existing standards.** Alignment with the **Federatief Datastelsel
-  (FDS)** standards and principles is required by the brief; alignment
-  with **NORA** is appreciated by the jury. The NL API Strategy, the
-  Berichtenbox (Logius), and Common Ground architecture are the practical
-  building blocks teams reason from. See
+  (FDS)** standards and principles, and with **NORA**, is graded as a
+  Should in [docs/beoordelingscriteria.md](docs/beoordelingscriteria.md)
+  and is appreciated by the jury. The NL API Strategy, the Berichtenbox
+  (Logius), and Common Ground architecture are the practical building
+  blocks teams reason from. See
   [docs/architectuur-context.md](docs/architectuur-context.md).
 
 See [docs/juridisch-kader.md](docs/juridisch-kader.md) for more detail.
@@ -321,7 +322,7 @@ See [docs/juridisch-kader.md](docs/juridisch-kader.md) for more detail.
 Teams submit through **Alkemio**, the central submission and review point
 for the OneGov #2 jury.
 
-- **Alkemio submission link:** _TODO: link to be added by the organiser._
+- **Alkemio submission link:** [Inwoner Centraal: Nabestaanden](https://alkem.io/onegov-hackathon/challenges/inwonercentraalnabestaand).
 - A team submits:
   - a **repository link** (GitHub, GitLab or similar; teams build their
     own prototype repository, this does not have to be a pull request

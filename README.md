@@ -107,7 +107,7 @@ any production use.
 Teams submit through **Alkemio**, the central submission and review point
 for the OneGov #2 jury.
 
-- **Alkemio submission link:** _TODO: link to be added by the organiser._
+- **Alkemio submission link:** [Inwoner Centraal: Nabestaanden](https://alkem.io/onegov-hackathon/challenges/inwonercentraalnabestaand).
 - A team submits: a repository link (GitHub, GitLab or similar; this does
   not have to be a pull request against this repo, teams build their own
   prototype repository), a working prototype or demo, a pitch deck (max.

@@ -43,16 +43,13 @@ building blocks - see [`beoordelingscriteria.md`](beoordelingscriteria.md).
 ### Data infrastructure
 
 - **Federatief Datastelsel (FDS)**: the Dutch government's federated data
-  framework. Alignment with FDS standards and principles is **required**
-  by the brief; the jury also values alignment with NORA. Start at the
-  FDS standards page
+  framework. Alignment with FDS standards and principles is graded as a
+  **Should** in [`beoordelingscriteria.md`](beoordelingscriteria.md); the
+  jury also values alignment with **NORA**. Start at the FDS standards
+  page
   ([federatiefdatastelsel.pleio.nl/page/view/standaarden](https://federatiefdatastelsel.pleio.nl/page/view/standaarden))
   and the FDS principles page
   ([federatiefdatastelsel.pleio.nl/page/view/uitgangspunten](https://federatiefdatastelsel.pleio.nl/page/view/uitgangspunten)).
-  _TODO: confirm with challenge owners (Natalie Moreno Robles, Ingrid
-  Verhage) whether FDS alignment is graded as a Must or as a Should in
-  [`beoordelingscriteria.md`](beoordelingscriteria.md); the brief uses
-  the word "noodzakelijk" (necessary)._
 - **NORA** ([noraonline.nl](https://www.noraonline.nl)): reference
   architecture for the Dutch government, including service principles
   and quality attributes.

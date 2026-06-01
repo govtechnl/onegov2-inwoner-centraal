@@ -27,6 +27,11 @@ from the challenge brief.
 - [ ] **Inclusive.** Accounts for low digital *doenvermogen* and limited
       language proficiency. (Use Anneke as a stress test,
       see [`personas.md`](personas.md#03--anneke-71--the-analogue-widow).)
+- [ ] **FDS and NORA alignment.** The prototype reasons from the
+      Federatief Datastelsel (FDS) standards and principles, and from
+      NORA reference architecture. See
+      [`architectuur-context.md`](architectuur-context.md) for entry
+      points.
 
 ## ⚠️ Should not: pitfalls to avoid
 
