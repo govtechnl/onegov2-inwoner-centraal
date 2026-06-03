@@ -3,6 +3,8 @@
 > **Why this file exists.** This file translates the challenge brief into 10 concrete, demo-able user stories that map directly onto the synthetic data and personas. Each scenario is small enough to prototype in a few hours, but together they cover every must-have from [`docs/beoordelingscriteria.md`](beoordelingscriteria.md).
 >
 > **How to use.** Pick one or two scenarios as your demo spine. Use the rest as inspiration or to stretch goals. You are *not* required to implement these - they exist to unblock teams who want a concrete starting point.
+>
+> **Looking for more obligations to model?** The KvK inventarisatie in [`resources/kvk-inventarisatie/`](../resources/kvk-inventarisatie/README.md) lists ~84 concrete verplichtingen, contactmomenten and *knelpunten* across 22 instanties in the first 3 months after death — a useful checklist when extending these scenarios. Read its caveats first (snapshot 2024-12, ondernemer-bias).
 
 ---
 

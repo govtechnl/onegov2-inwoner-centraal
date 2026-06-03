@@ -9,6 +9,12 @@ This document summarises the legal context referenced in
 the original sources or the *Rijksoverheid* legal teams. None of the below
 is legal advice.
 
+For a concrete (but incomplete and dated) inventory of which *verplichtingen*
+actually fire in the first 3 months after death — including the underlying
+*Aard* (wet/beleid) and source references — see
+[`resources/kvk-inventarisatie/`](../resources/kvk-inventarisatie/README.md)
+(KvK snapshot 2024-12, ondernemer-bias).
+
 ## 1. GDPR after death
 
 The General Data Protection Regulation (GDPR / *AVG*) applies only to *living*

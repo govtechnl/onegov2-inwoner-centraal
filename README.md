@@ -66,7 +66,7 @@ prototype.**
 |---|---|
 | [CHALLENGE.md](CHALLENGE.md) | Full challenge brief (English translation of the Dutch original) |
 | [docs/](docs/) | Personas, the Truus & Cees case, legal context, judging criteria, architecture notes |
-| [resources/](resources/) | Original source materials (DOCX, PPTX, PDF) provided by ICTU |
+| [resources/](resources/) | Original source materials (PDF, PPTX, XLSX) provided by ICTU and partners — see [resources/README.md](resources/README.md). Includes the [KvK inventarisatie verplichtingen](resources/kvk-inventarisatie/README.md) (snapshot 2024, ondernemer-bias). |
 | [data/schemas/](data/schemas/) | JSON Schemas for every data layer |
 | [data/synthetic/](data/synthetic/) | Generated synthetic datasets (output of the generator) |
 | [data/fixtures/](data/fixtures/) | Hand-curated golden cases matching each persona |

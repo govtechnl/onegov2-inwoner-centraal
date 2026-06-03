@@ -37,6 +37,13 @@ python -m generate --seed 42 --n 500 --out ..\data\synthetic
 - Golden fixtures: [data/fixtures/](data/fixtures/)
 - Data dictionary: [data/README.md](data/README.md)
 
+## 4b) Browse the domain references (optional, 10 min)
+
+For extra real-world context beyond the schemas:
+
+- [resources/README.md](resources/README.md) — index of original ICTU/partner materials.
+- [resources/kvk-inventarisatie/](resources/kvk-inventarisatie/) — KvK inventarisatie of obligations, correspondence and contact moments in the first 3 months after death. Useful as a checklist for **Stap 2** (totaaloverzicht). Note the caveats: snapshot 2024-12, incomplete, primarily about *nabestaanden van ondernemers*.
+
 ## 5) Build your prototype slice
 
 - Start from one persona/scenario.
